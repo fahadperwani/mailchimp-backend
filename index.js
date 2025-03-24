@@ -6,6 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => res.send("Express on Vercel", process.env.MAILCHIMP_API_KEY));
+
 app.post("/addContact", async (req, res) => {
     try {
         await addContact(req.body.email);
