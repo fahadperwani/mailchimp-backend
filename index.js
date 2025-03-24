@@ -1,7 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const { addContact, getCampaigns } = require("./mailchimp");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.post("/addContact", async (req, res) => {

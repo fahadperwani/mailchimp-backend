@@ -9,7 +9,6 @@ mailchimp.setConfig({
 const listId = "2ffcde95d2";
 
 
-
 async function addContact(email) {
     const response = await mailchimp.lists.addListMember(listId, {
         email_address: email,
